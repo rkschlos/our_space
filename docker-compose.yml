@@ -4,12 +4,6 @@ volumes:
   pg-admin:
     external: true
 services:
-
-
-
-
-
-
   jobs:
     build:
       context: ./jobs/api
