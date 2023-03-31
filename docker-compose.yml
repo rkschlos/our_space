@@ -1,8 +1,8 @@
 volumes:
   ourspace:
     external: true
-  pg-admin:
-    external: true
+  # pg-admin:
+  #   external: true
 services:
   jobs:
     build:
@@ -17,7 +17,6 @@ services:
       ADZUNA_API_KEY: ${ADZUNA_API_KEY}
       ADZUNA_APP_ID: ${ADZUNA_APP_ID}
       SECRET_KEY: 1435e80f9a1c4c54a59f27d42743e016356036c4a0d955e0cd56318af53be578
-
 
   db:
     image: postgres:14.2-bullseye

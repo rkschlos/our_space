@@ -21,7 +21,7 @@ def get_and_save_jobs():
     content = json.loads(response.content)
 
     jobs = content["results"]
-    print(jobs)
+
 
     with pool.connection() as conn:
         with conn.cursor() as cur:
