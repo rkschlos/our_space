@@ -4,6 +4,12 @@ volumes:
   pg-admin:
     external: true
 services:
+
+
+
+
+
+
   jobs:
     build:
       context: ./jobs/api
@@ -17,3 +23,20 @@ services:
       ADZUNA_API_KEY: ${ADZUNA_API_KEY}
       ADZUNA_APP_ID: ${ADZUNA_APP_ID}
       SECRET_KEY: 1435e80f9a1c4c54a59f27d42743e016356036c4a0d955e0cd56318af53be578
+
+
+  db:
+    image: postgres:14.2-bullseye
+    volumes:
+      #for your initialization scripts
+      - ./data/postgres/init:/docker-entrypoint-initdb.d
+      # For the data stored by PostgreSQL
+      - ourspace:/var/lib/postgresql/data
+    environment:
+      #for the superuser of postgres instance- must be same as above
+      # Password for the postgres superuser
+      # See 01-create-databases.sql for the name/password
+      #   for the user of the application database
+      POSTGRES_PASSWORD: ourspace
+    ports:
+      - "15432:5432"

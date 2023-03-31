@@ -23,36 +23,36 @@ def get_and_save_jobs():
     jobs = content["results"]
     print(jobs)
 
-    # with pool.connection() as conn:
-    #     with conn.cursor() as cur:
-    #         for job in jobs:
-    #             if len(job["location"]["area"]) >= 3:
-    #                 cur.execute(
-    #                     """
-    #                     INSERT INTO jobs (id,
-    #                         created,
-    #                         city,
-    #                         state,
-    #                         title,
-    #                         company,
-    #                         description,
-    #                         redirect_url)
-    #                     VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
-    #                     ON CONFLICT (id) DO NOTHING;
-    #                     """,
-    #                     [
-    #                         job["id"],
-    #                         job["created"],
-    #                         job["location"]["area"][-1],
-    #                         job["location"]["area"][1],
-    #                         job["title"],
-    #                         job["company"]["display_name"],
-    #                         job["description"],
-    #                         job["redirect_url"],
-    #                     ],
-    #                 )
-    #             cur.execute("SELECT * FROM jobs")
-    #         conn.commit()
+    with pool.connection() as conn:
+        with conn.cursor() as cur:
+            for job in jobs:
+                if len(job["location"]["area"]) >= 3:
+                    cur.execute(
+                        """
+                        INSERT INTO jobs (id,
+                            created,
+                            city,
+                            state,
+                            title,
+                            company,
+                            description,
+                            redirect_url)
+                        VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
+                        ON CONFLICT (id) DO NOTHING;
+                        """,
+                        [
+                            job["id"],
+                            job["created"],
+                            job["location"]["area"][-1],
+                            job["location"]["area"][1],
+                            job["title"],
+                            job["company"]["display_name"],
+                            job["description"],
+                            job["redirect_url"],
+                        ],
+                    )
+                cur.execute("SELECT * FROM jobs")
+            conn.commit()
 
 
 def poll():
