@@ -6,9 +6,5 @@ ADD https://github.com/ufoscout/docker-compose-wait/releases/download/2.9.0/wait
 RUN chmod +x /wait
 COPY requirements.txt requirements.txt
 
-# Install dotenv and load environment variables
-RUN pip install python-dotenv
-COPY .env .env
-RUN dotenv python -c 'import os; print(os.environ["DATABASE_URL"])'
 
 CMD uvicorn main:app --reload --host 0.0.0.0 & python jobs_db.py
