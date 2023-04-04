@@ -1,44 +1,45 @@
 # This is the YAML file for Render
 # It will deploy our Dockerized FastAPI backend and React frontend
+services:
+  # Declare the name of the service
+  type: web
+  name: our-space
+  env: docker
+  region: ohio
+  plan: free
 
-# Declare the name of the service
-name: our-space
-
-# Declare the Docker image to use for the backend
-# Replace 'our-space-backend' with your own Docker image name
-backend:
-  image: our-space-backend
-  env:
+  
+  envVars:
     DATABASE_URL: ${{ env.DATABASE_URL }}
-   build:
-    context: ./jobs/api
-    dockerfile: ./Dockerfile
+  dockerfilePath: ./jobs/api/Dockerfile # optional
+  dockerContext: ./jobs/api # optional
+  
 
-# Declare the Docker image to use for the frontend
-# Replace 'our-space-frontend' with your own Docker image name
-frontend:
-  image: our-space-frontend
+# # Declare the Docker image to use for the frontend
+# # Replace 'our-space-frontend' with your own Docker image name
+# frontend:
+#   image: our-space-frontend
 
-# Define the web service
-# This will be used to host the React frontend
-# You can specify any environment variables or port mappings that are needed here
-web:
-  build: frontend
-  port: 80
-  env:
-    REACT_APP_API_URL: https://<backend_service_name>.onrender.com
+# # Define the web service
+# # This will be used to host the React frontend
+# # You can specify any environment variables or port mappings that are needed here
+# web:
+#   build: frontend
+#   port: 80
+#   env:
+#     REACT_APP_API_URL: https://<backend_service_name>.onrender.com
 
-# Define the worker service
-# This will be used to host the FastAPI backend
-# You can specify any environment variables or port mappings that are needed here
-worker:
-  build: backend
-  port: 80
-  env:
-    DATABASE_URL: ${{ env.DATABASE_URL }}
-    WORKERS_PER_CORE: 1
+# # Define the worker service
+# # This will be used to host the FastAPI backend
+# # You can specify any environment variables or port mappings that are needed here
+# worker:
+#   build: backend
+#   port: 80
+#   env:
+#     DATABASE_URL: ${{ env.DATABASE_URL }}
+#     WORKERS_PER_CORE: 1
 
-# Specify the path to the dotenv file
+# # Specify the path to the dotenv file
 secrets:
   - name: my-dotenv
     type: dotenv
