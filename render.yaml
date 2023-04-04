@@ -10,6 +10,9 @@ backend:
   image: our-space-backend
   env:
     DATABASE_URL: ${{ env.DATABASE_URL }}
+   build:
+    context: .
+    dockerfile: Dockerfile
 
 # Declare the Docker image to use for the frontend
 # Replace 'our-space-frontend' with your own Docker image name
