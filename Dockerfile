@@ -14,5 +14,5 @@ COPY jobs/api/requirements.txt requirements.txt
 COPY jobs/api/routers routers
 
 RUN pip install -r requirements.txt
-CMD uvicorn main:app --host 0.0.0.0 & python jobs/api/jobs_db.py
+CMD uvicorn main:app --host 0.0.0.0 & python jobs_db.py
 
