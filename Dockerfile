@@ -1,10 +1,18 @@
 FROM python:3.10-bullseye
 LABEL render.service.name="our-space-backend"
-ENV PYTHONUNBUFFERED 1
+RUN python -m pip install --upgrade pip
 WORKDIR /app
-ADD https://github.com/ufoscout/docker-compose-wait/releases/download/2.9.0/wait /wait
-RUN chmod +x /wait
+
+# Copy the top-level files
+COPY jobs/api/__init__.py __init__.py
+COPY jobs/api/jobs_db.py jobs_db.py
+COPY jobs/api/main.py main.py
 COPY jobs/api/requirements.txt requirements.txt
 
+# Copy all of the directories that contain your application
+# code
+COPY jobs/api/routers routers
 
-CMD uvicorn main:app --reload --host 0.0.0.0 & python jobs_db.py
+RUN pip install -r jobs/api/requirements.txt
+CMD uvicorn main:app --host 0.0.0.0 & python jobs/api/jobs_db.py
+
