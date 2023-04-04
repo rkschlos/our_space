@@ -11,7 +11,7 @@ backend:
   env:
     DATABASE_URL: ${{ env.DATABASE_URL }}
    build:
-    context: ./jobs/api
+    context: /jobs/api
     dockerfile: Dockerfile
 
 # Declare the Docker image to use for the frontend
