@@ -1,5 +1,3 @@
-# This is the YAML file for Render
-# It will deploy our Dockerized FastAPI backend and React frontend
 databases:
   - name: ourspace
     databaseName: ourspace
@@ -19,8 +17,8 @@ services:
           name: ourspace
           property: connectionString
 
-  dockerfilePath: ./jobs/api/Dockerfile # optional
-  dockerContext: ./jobs/api # optional
+  dockerfilePath: ./jobs/api/Dockerfile 
+  dockerContext: ./jobs/api
   
   - type: pserv
     name: pgbouncer
