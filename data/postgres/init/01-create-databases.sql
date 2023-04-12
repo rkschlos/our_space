@@ -4,5 +4,5 @@
 CREATE USER ourspace WITH LOGIN PASSWORD 'ourspace' SUPERUSER;
 
 
-CREATE DATABASE jobs WITH OWNER ourspace;
+CREATE DATABASE ourspace WITH OWNER ourspace;
 

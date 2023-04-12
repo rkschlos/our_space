@@ -1,4 +1,4 @@
-\connect jobs
+\connect ourspace
 
 CREATE TABLE jobs (
     id BIGINT NOT NULL PRIMARY KEY,
