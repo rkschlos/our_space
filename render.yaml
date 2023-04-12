@@ -7,7 +7,6 @@ databases:
     
 
 services:
-  # Declare the name of the service
   - type: web
     name: our-space
     env: docker
