@@ -2,7 +2,6 @@ databases:
   - name: ourspace
     databaseName: ourspace
     user: ourspace
-    
 services:
   - type: web
     name: our-space
