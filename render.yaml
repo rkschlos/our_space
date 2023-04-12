@@ -3,7 +3,6 @@ databases:
     databaseName: ourspace
     user: ourspace
     
-
 services:
   - type: web
     name: our-space
