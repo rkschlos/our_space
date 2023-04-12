@@ -1,10 +1,10 @@
 databases:
-  name: ourspace
+- name: ourspace
   databaseName: ourspace
   user: ourspace
-  
+
 services:
-  type: web
+- type: web
   name: our-space
   env: docker
   region: ohio
@@ -23,6 +23,6 @@ services:
 
 
 secrets:
-  name: my-dotenv
+- name: my-dotenv
   type: dotenv
   path: .env
