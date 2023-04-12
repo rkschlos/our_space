@@ -1,5 +1,10 @@
 # This is the YAML file for Render
 # It will deploy our Dockerized FastAPI backend and React frontend
+database:
+  name: ourspace
+  databaseName: ourspace
+  user: ourspace
+
 services:
   # Declare the name of the service
   type: web
@@ -15,31 +20,7 @@ services:
   dockerContext: ./jobs/api # optional
   
 
-# # Declare the Docker image to use for the frontend
-# # Replace 'our-space-frontend' with your own Docker image name
-# frontend:
-#   image: our-space-frontend
 
-# # Define the web service
-# # This will be used to host the React frontend
-# # You can specify any environment variables or port mappings that are needed here
-# web:
-#   build: frontend
-#   port: 80
-#   env:
-#     REACT_APP_API_URL: https://<backend_service_name>.onrender.com
-
-# # Define the worker service
-# # This will be used to host the FastAPI backend
-# # You can specify any environment variables or port mappings that are needed here
-# worker:
-#   build: backend
-#   port: 80
-#   env:
-#     DATABASE_URL: ${{ env.DATABASE_URL }}
-#     WORKERS_PER_CORE: 1
-
-# # Specify the path to the dotenv file
 secrets:
   - name: my-dotenv
     type: dotenv
