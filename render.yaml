@@ -1,21 +1,24 @@
 # This is the YAML file for Render
 # It will deploy our Dockerized FastAPI backend and React frontend
-database:
-  name: ourspace
-  databaseName: ourspace
-  user: ourspace
+databases:
+  - name: ourspace
+    databaseName: ourspace
+    user: ourspace
+    repo: https://github.com/rkschlos/our_space.git
 
 services:
   # Declare the name of the service
-  type: web
-  name: our-space
-  env: docker
-  region: ohio
-  plan: free
+  - type: web
+    name: our-space
+    env: docker
+    region: ohio
+    plan: free
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: ourspace
+          property: connectionString
 
-  
-  envVars:
-    DATABASE_URL: ${{ env.DATABASE_URL }}
   dockerfilePath: ./jobs/api/Dockerfile # optional
   dockerContext: ./jobs/api # optional
   
