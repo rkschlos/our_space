@@ -7,7 +7,7 @@ function JobsList(props) {
   useEffect(() => {
     const getJobsData = async () => {
       const jobsResponse = await fetch(
-        `/api/jobs/list/`
+        `${process.env.REACT_APP_JOBS_HOST}/api/jobs/list/`
       );
       const jobsData = await jobsResponse.json();
       setJobs(jobsData);
