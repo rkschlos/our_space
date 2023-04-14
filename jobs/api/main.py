@@ -8,6 +8,7 @@ app = FastAPI()
 
 origins = [
     "http://localhost:3000",
+    "https://ourspace-frontend.onrender.com",
     os.environ.get("CORS_HOST", None),
 ]
 
