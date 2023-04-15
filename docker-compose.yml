@@ -17,8 +17,8 @@ services:
       NODE_ENV: development
       HOST: "0.0.0.0"
       REACT_APP_API_HOST: http://localhost:8000
-      REACT_APP_JOBS_HOST: http://localhost:8080
-      REACT_APP_ACCOUNTS_HOST: http://localhost:8080
+      REACT_APP_OURSPACE_HOST: http://localhost:8080
+      
       
   jobs:
     build:

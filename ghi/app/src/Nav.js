@@ -8,7 +8,7 @@ function Nav(props) {
 
   useEffect(() => {
     async function getMe() {
-      const url = `${process.env.REACT_APP_ACCOUNTS_HOST}/users/me`;
+      const url = `${process.env.REACT_APP_OURSPACE_HOST}/users/me`;
       const response = await fetch(url, { credentials: "include" });
       if (response.ok) {
         const user = await response.json();

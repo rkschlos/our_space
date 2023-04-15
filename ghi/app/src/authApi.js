@@ -27,7 +27,7 @@ function handleErrorMessage(error) {
 }
 
 async function getTokenInternal() {
-  const url = `${process.env.REACT_APP_ACCOUNTS_HOST}/token`;
+  const url = `${process.env.REACT_APP_OURSPACE_HOST}/token`;
   try {
     const response = await fetch(url, {
       credentials: "include",
@@ -56,7 +56,7 @@ export function useToken() {
 
   async function logout() {
     if (token) {
-      const url = `${process.env.REACT_APP_ACCOUNTS_HOST}/token`;
+      const url = `${process.env.REACT_APP_OURSPACE_HOST}/token`;
       await fetch(url, { method: "delete", credentials: "include" });
       internalToken = null;
       setToken(null);
@@ -64,7 +64,7 @@ export function useToken() {
   }
 
   async function login(username, password) {
-    const url = `${process.env.REACT_APP_ACCOUNTS_HOST}/token`;
+    const url = `${process.env.REACT_APP_OURSPACE_HOST}/token`;
     const form = new FormData();
     form.append("username", username);
     form.append("password", password);
@@ -83,7 +83,7 @@ export function useToken() {
   }
 
   async function signup(username, firstname, lastname, email, password) {
-    const url = `${process.env.REACT_APP_ACCOUNTS_HOST}/api/users`;
+    const url = `${process.env.REACT_APP_OURSPACE_HOST}/api/users`;
     const response = await fetch(url, {
       credentials: "include",
       method: "post",
