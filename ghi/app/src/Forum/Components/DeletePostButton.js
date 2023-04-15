@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 function DeletePostButton({ token, postId }) {
   const navigate = useNavigate();
   async function DeletePost() {
-    const deletePostUrl = `${process.env.REACT_APP_FORUM_HOST}/api/posts/${postId}/`;
+    const deletePostUrl = `${process.env.REACT_APP_OURSPACE_HOST}/api/posts/${postId}/`;
     const fetchConfigEvent = {
       method: "DELETE",
       credentials: "include",
