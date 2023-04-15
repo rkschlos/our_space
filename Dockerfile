@@ -7,6 +7,7 @@ WORKDIR /app
 COPY jobs/api/__init__.py __init__.py
 COPY jobs/api/jobs_db.py jobs_db.py
 COPY jobs/api/users_db.py users_db.py
+COPY jobs/api/forum_db.py forum_db.py
 COPY jobs/api/main.py main.py
 COPY jobs/api/requirements.txt requirements.txt
 

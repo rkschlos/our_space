@@ -7,6 +7,11 @@ import Signup from "./Auth/Signup";
 import Logout from "./Auth/Logout";
 import { useToken } from "./authApi";
 import JobsList from "./Jobs/JobsList";
+import PostsList from "./Forum/Components/PostsList";
+import PostForm from "./Forum/Api/Forms/PostForm";
+import ListView from "./Forum/Views/ListView";
+import DetailView from "./Forum/Views/DetailView";
+import CommentForm from "./Forum/Api/Forms/CommentForm";
 
 
 
@@ -29,6 +34,15 @@ function App() {
           {/* JOBS */}
           <Route path="jobs" element={<JobsList token={token}/>} />
           <Route path="*" element={<Navigate to="/" />} />
+          {/* FORUM */}
+          <Route path="forum" element={<ListView token={token} />} />
+          <Route path="posts/:post_id" element={<DetailView token={token} />} />
+          <Route
+            path="posts/:post_id/comment/form"
+            element={<CommentForm token={token} />}
+          />
+          <Route path="posts" element={<PostsList token={token} />} />
+          <Route path="posts/new" element={<PostForm token={token} />} />
         </Routes>
       </BrowserRouter>
     </>

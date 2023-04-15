@@ -40,15 +40,13 @@ function Nav(props) {
                 {/* <NavLink className="dropdown-item" to="/profile/new" role="button">
                   Profile Form
                 </NavLink> */}
-                <NavLink className="dropdown-item" to="/profile" role="button">
-                  Profile Page
-                </NavLink>
+                
                 <NavLink className="dropdown-item" to="jobs" role="button">
                   Jobs
                 </NavLink>
-                {/* <NavLink className="dropdown-item" to="forum" role="button">
+                <NavLink className="dropdown-item" to="forum" role="button">
                   Forum
-                </NavLink> */}
+                </NavLink>
               </>
             ) : (
               <>
