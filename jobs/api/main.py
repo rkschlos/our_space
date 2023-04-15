@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from routers import jobs_api
+from routers import jobs_api, users
 from fastapi.middleware.cors import CORSMiddleware
 import os
 
@@ -21,3 +21,4 @@ app.add_middleware(
 )
 
 app.include_router(jobs_api.router)
+app.include_router(users.router)
