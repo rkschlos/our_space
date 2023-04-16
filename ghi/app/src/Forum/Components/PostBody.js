@@ -2,18 +2,19 @@ import React from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { UpvoteButton } from "./UpvoteButton";
 import DeletePostButton from "./DeletePostButton";
+import styles from "./PostBody.module.css"
 
 
 const PostBody = ({ post, setPost, token, showNavLinks, hideDeleteButton }) => {
   const navigate = useNavigate();
   return (
-    <div key={post.post_id} className="card mb-3 shadow">
+    <div key={post.post_id} className={styles.card}>
       <div className="card-body">
         <h5 className="card-title">
           {" "}
           {showNavLinks ? (
             <button
-              className="link-dark"
+              className={styles.detail_button}
               onClick={() => navigate("/posts/" + post.post_id)}
             >
               {post.title}
@@ -31,13 +32,13 @@ const PostBody = ({ post, setPost, token, showNavLinks, hideDeleteButton }) => {
             </>
           )}
         </h5>
-        <p className="card-text">{post.text}</p>
-        <h6 className="card-subtitle mb-2 text-muted">
+        <p className={styles.text}>{post.text}</p>
+        <h6 className={styles.date}>
           Created on:&nbsp;
           {new Date(post.created_on).toLocaleDateString()}
         </h6>
       </div>
-      <div className="card-footer">
+      <div className={styles.comments_link}>
         {showNavLinks ? (
           <NavLink
             to={"/posts/" + post.post_id}

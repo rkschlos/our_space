@@ -1,0 +1,31 @@
+.card {
+    background-color: #ebf6f5;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    width: 60%;
+    margin: auto;
+}
+
+.detail_button {
+    background: #5cbdb9;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    text-decoration: wavy;
+    font-size:x-large;
+    margin-top: 20px;
+}
+
+.text {
+    background-color: aliceblue;
+    width:60%;
+    margin: auto;
+}
+
+.date {
+    background-color: aliceblue;
+}
+
+.comments_link {
+    background-color: aliceblue
+}

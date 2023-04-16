@@ -1,0 +1,27 @@
+
+.header {
+    background-color: yellow;
+}
+
+.card {
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    width: 90%;
+    margin: auto;
+}
+
+.card_body {
+    color: blue;
+}
+
+.card_title{
+    background-color: pink;
+}
+
+.card_subtitle{
+    background-color: green;
+}
+
+.card_text {
+    background-color: yellow;
+}

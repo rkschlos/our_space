@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
+import styles from "./Nav.module.css"
 
 function Nav(props) {
   const { token } = props;
@@ -24,39 +25,39 @@ function Nav(props) {
   //   return null
   // }
   return (
-    <nav className="navbar sticky-top navbar-expand-lg navbar-dark">
+    <nav className={styles.navbar}>
       <div className="container-fluid">
         <NavLink className="navbar-brand" to="/">
           OurSpace
         </NavLink>
         <div>
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+          <ul className={styles.ul}>
             {token ? (
               <>
                 {/* Whatever you want to show when people are logged in */}
-                <NavLink className="dropdown-item" to="/logout" role="button">
+                <NavLink className={styles.li} to="/logout" role="button">
                   Logout {user.username}
                 </NavLink>
                 {/* <NavLink className="dropdown-item" to="/profile/new" role="button">
                   Profile Form
                 </NavLink> */}
                 
-                <NavLink className="dropdown-item" to="jobs" role="button">
+                <NavLink className={styles.li} to="jobs" role="button">
                   Jobs
                 </NavLink>
-                <NavLink className="dropdown-item" to="forum" role="button">
+                <NavLink className={styles.li} to="forum" role="button">
                   Forum
                 </NavLink>
               </>
             ) : (
               <>
-                <NavLink className="dropdown-item" to="/login" role="button">
+                <NavLink className={styles.li} to="/login" role="button">
                   Login
                 </NavLink>
-                <NavLink className="dropdown-item" to="/signup" role="button">
+                <NavLink className={styles.li} to="/signup" role="button">
                   Signup
                 </NavLink>
-                <NavLink className="dropdown-item" to="jobs" role="button">
+                <NavLink className={styles.li} to="jobs" role="button">
                   Jobs
                 </NavLink>
               </>

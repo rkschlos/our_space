@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import styles from "./JobsList.module.css"
 
 function JobsList(props) {
   
@@ -18,20 +19,20 @@ function JobsList(props) {
 
   return (
     <>
-      <h1 align="center">
+      <h1 className={styles.header}>
         <u>Jobs</u>
       </h1>
-      <div className="col job-card">
+      <div className={styles.list}>
         {jobs.map((job) => {
           return (
-            <div key={job.id} className="card mb-3 shadow">
+            <div key={job.id} className={styles.card}>
               <div> 
-                <div className="card-body">
-                  <h5 className="card-title text-center">{job.title}</h5>
-                  <h6 className="card-subtitle mb-2 text-muted text-center">
+                <div className={styles.card_body}>
+                  <h5 className={styles.card_title}>{job.title}</h5>
+                  <h6 className={styles.card_subtitle}>
                     {job.company}
                   </h6>
-                  <p className="card-text">{job.description}</p>
+                  <p className={styles.card_text}>{job.description}</p>
                   <p className="card-text text-center">
                     <a href={job.redirect_url} target="_blank" rel="noreferrer">
                       Click to Learn More

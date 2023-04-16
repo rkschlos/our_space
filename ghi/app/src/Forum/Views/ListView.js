@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import PostsList from "../Components/PostsList";
 import { getPosts } from "../Api/GetPostsData";
+import styles from "./ListView.module.css"
 
 
 const ListView = (props) => {
@@ -12,12 +13,12 @@ const ListView = (props) => {
 
   useEffect(() => {
     async function initializePosts() {
-      let posts = await getPosts({ token: token });
-      if (typeof(posts) === 'object' && posts.detail === "Not Found") {
+      let postsResponse = await getPosts({ token: token });
+      if (typeof(postsResponse) === 'object' && postsResponse.detail === "Not Found") {
         setPosts([])
       }
       else {
-        setPosts(posts);
+        setPosts(postsResponse);
       }
     }
     initializePosts();
@@ -25,9 +26,9 @@ const ListView = (props) => {
 
   return (
     
-      <div>
+      <div className={styles.forum_body}>
         
-          OurForum &#9825;{" "}
+          <h1>OurForum &#9825;{" "}</h1>
           <button onClick={() => navigate("/posts/new/")}>
             Create post
           </button>

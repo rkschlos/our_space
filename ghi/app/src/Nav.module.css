@@ -1,0 +1,17 @@
+.navbar {
+    background-color: aquamarine;
+}
+
+.ul {
+list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: yellow;
+}
+
+.li {
+  float: right;
+  display: block;
+  padding: 8px;
+}

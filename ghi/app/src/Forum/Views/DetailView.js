@@ -4,6 +4,7 @@ import PostBody from "../Components/PostBody";
 import CommentList from "../Components/CommentList";
 import { getPost } from "../Api/GetPostData";
 import { getCurrentUser } from "../Api/GetCurrentUser";
+import styles from "./DetailView"
 
 
 const DetailView = (props) => {
