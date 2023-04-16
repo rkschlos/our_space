@@ -43,6 +43,7 @@ def jobs_list():
                     redirect_url
                 FROM jobs
                 LIMIT 100
+                ORDER BY created DESC
                 """,
             )
 
