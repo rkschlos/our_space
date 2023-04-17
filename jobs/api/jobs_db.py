@@ -16,7 +16,8 @@ ADZUNA_APP_ID = os.environ["ADZUNA_APP_ID"]
 
 def get_and_save_jobs():
     response = requests.get(
-        f"https://api.adzuna.com/v1/api/jobs/us/search/1?app_id={ADZUNA_APP_ID}&app_key={ADZUNA_API_KEY}&results_per_page=10&what=developer"
+        f"https://api.adzuna.com/v1/api/jobs/us/search/1?app_id={ADZUNA_APP_ID}&app_key={ADZUNA_API_KEY}&results_per_page=10&what=software%20developer%20engineer&sort_by=date"
+        #f"https://api.adzuna.com/v1/api/jobs/us/search/1?app_id={ADZUNA_APP_ID}&app_key={ADZUNA_API_KEY}&results_per_page=10&what=developer"
     )
     content = json.loads(response.content)
 
