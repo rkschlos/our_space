@@ -1,12 +1,34 @@
 .comment_card {
     text-align: center;
+    border-bottom: 1px solid #ccc;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .header {
     font-size: larger;
-    margin-top: 40px
+    margin-top: 40px;
+     border-bottom: 1px solid #ccc;
 }
 
 .link_to_comment {
     font-size: medium;
+}
+
+.card_text {
+    width: 40%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+
+    background-color: white;
+}
+
+.date {
+    color: grey;
+    
 }

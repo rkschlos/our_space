@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Navigate } from 'react-router-dom';
+import styles from './Login.module.css'
 
 function Login(props) {
   const { token, login } = props;
@@ -18,11 +19,15 @@ function Login(props) {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className={styles.form_card}>
       { error ? <div dangerouslySetInnerHTML={{__html: error}} /> : null }
-      <input required name="username" type="text" onChange={e => setUsername(e.target.value)} value={username} placeholder="username" />
-      <input required name="password" type="password" onChange={e => setPassword(e.target.value)} value={password} placeholder="password" />
-      <button>Login</button>
+      <div className={styles.input_card}>
+      <input className={styles.input}required name="username" type="text" onChange={e => setUsername(e.target.value)} value={username} placeholder="username" />
+      </div>
+      <div className={styles.input_card}>
+      <input className={styles.input} required name="password" type="password" onChange={e => setPassword(e.target.value)} value={password} placeholder="password" />
+      </div>
+      <button className={styles.submitButton}>Login</button>
     </form>
   )
 }
