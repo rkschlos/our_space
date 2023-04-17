@@ -19,8 +19,9 @@ function JobsList(props) {
 
   return (
     <>
+    <div className={styles.list_page}>
       <h1 className={styles.header}>
-        <u>Jobs</u>
+        OurJobs
       </h1>
       <div className={styles.list}>
         {jobs.map((job) => {
@@ -28,10 +29,10 @@ function JobsList(props) {
             <div key={job.id} className={styles.card}>
               <div> 
                 <div className={styles.card_body}>
-                  <h5 className={styles.card_title}>{job.title}</h5>
-                  <h6 className={styles.card_subtitle}>
+                  <div className={styles.card_title}>{job.title}</div>
+                  <div className={styles.card_company}>
                     {job.company}
-                  </h6>
+                  </div>
                   <p className={styles.card_text}>{job.description}</p>
                   <p className="card-text text-center">
                     <a href={job.redirect_url} target="_blank" rel="noreferrer">
@@ -39,14 +40,15 @@ function JobsList(props) {
                     </a>
                   </p>
                 </div>
-                <div className="card-footer job-card-footer">
-                  Created on:&nbsp;
+                <div className={styles.post_date}>
+                  Posted on:&nbsp;
                   {new Date(job.created).toLocaleDateString()}
                 </div>
               </div>
             </div>
           );
         })}
+      </div>
       </div>
     </>
   );

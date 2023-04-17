@@ -14,14 +14,14 @@ const PostBody = ({ post, setPost, token, showNavLinks, hideDeleteButton }) => {
           {" "}
           {showNavLinks ? (
             <button
-              className={styles.detail_button}
+              className={styles.postdetail_button}
               onClick={() => navigate("/posts/" + post.post_id)}
             >
               {post.title}
             </button>
           ) : (
             <>
-              <div className="card-header">
+              <div className={styles.title_container}>
                 {post.title}{" "}
                 {hideDeleteButton ? (
                   <></>
