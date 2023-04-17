@@ -1,13 +1,22 @@
+
+
+
 .card {
-    background-color: aliceblue;
+    background-color: white;
     border-radius: 25px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     width: 60%;
-    margin: auto;
+    margin-bottom: 40px;
     margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
     overflow: auto;
     
+    
+    
 }
+
+
 
 .title_container {
 text-align: center;
@@ -20,7 +29,7 @@ text-align: center;
   font-size: 40px;
   color: #a63a79;
   font-weight: 500px;
-  background-color: #fadadd;
+  background-color: white;
 }
 
 .detail_title {
@@ -31,10 +40,10 @@ text-align: center;
 
 .postdetail_button {
     display: block;
-  width: 100%;
+  width: 80%;
   padding: 12px 0;
-  margin-left: auto !important;
-  margin-right: 12px !important;
+  margin-left: auto;
+  margin-right: auto;
   font-family: inherit;
   font-size: 20px;
   font-weight: 700;
@@ -64,10 +73,18 @@ text-align: center;
 
 .date {
     font-size: 12px;
-    background-color: aliceblue;
+    background-color: white;
     text-align: center;
 }
 
 .comments_link {
-    background-color: aliceblue;
+    background-color: white;
+}
+
+.upvoteButton {
+    
+  background-color: white;
+  opacity: 0.5; /* set opacity to 50% */
+
+
 }

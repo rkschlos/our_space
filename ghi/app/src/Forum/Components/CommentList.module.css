@@ -1,0 +1,12 @@
+.comment_card {
+    text-align: center;
+}
+
+.header {
+    font-size: larger;
+    margin-top: 40px
+}
+
+.link_to_comment {
+    font-size: medium;
+}

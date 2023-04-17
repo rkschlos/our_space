@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./UpvoteButton.module.css"
 
 export function UpvoteButton({
   postId,
@@ -50,10 +51,11 @@ export function UpvoteButton({
 
   return (
     <button
+      className={styles.upvoteButton}
       style={
         userPostUpvoteCount <= 0
           ? { fontWeight: "normal", float: "right" }
-          : { fontWeight: "bold", color: "#a63a79", float: "right" }
+          : { fontWeight: "normal", color: "#a63a79", float: "right" }
       }
       onClick={userPostUpvoteCount <= 0 ? AddUpvote : DeleteUpvote}
     >

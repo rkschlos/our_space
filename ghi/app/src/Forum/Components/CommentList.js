@@ -1,18 +1,21 @@
 import React, { useState, useEffect } from "react";
 import { useParams, NavLink } from "react-router-dom";
 import { getComments } from "../Api/GetCommentsData";
+import styles from "./CommentList.module.css"
 
 
 const CommentListBody = ({ comments }) => {
   return (
-    <div className="col">
-      <p>Comments</p>
-      <NavLink
+    <div className={styles.comment_card}>
+      <p className={styles.header}>Comments
+      <div className={styles.link_to_comment}><NavLink
         style={{ color: "mediumvioletred", float: "center" }}
         to={"comment/form"}
       >
         Add a comment
       </NavLink>
+      </div>
+      </p>
       {comments.map((comment) => {
         return (
           <div key={comment.comment_id} className="card mb-3">
