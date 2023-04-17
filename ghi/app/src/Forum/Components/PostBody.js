@@ -9,8 +9,8 @@ const PostBody = ({ post, setPost, token, showNavLinks, hideDeleteButton }) => {
   const navigate = useNavigate();
   return (
     <div key={post.post_id} className={styles.card}>
-      <div className="card-body">
-        <h5 className="card-title">
+      <div className={styles.card_body}>
+        <div className={styles.detail_title}>
           {" "}
           {showNavLinks ? (
             <button
@@ -21,22 +21,22 @@ const PostBody = ({ post, setPost, token, showNavLinks, hideDeleteButton }) => {
             </button>
           ) : (
             <>
-              <h2 className="card-header">
+              <div className="card-header">
                 {post.title}{" "}
                 {hideDeleteButton ? (
                   <></>
                 ) : (
                   <DeletePostButton token={token} postId={post.post_id} />
                 )}
-              </h2>
+              </div>
             </>
           )}
-        </h5>
+        </div>
         <p className={styles.text}>{post.text}</p>
-        <h6 className={styles.date}>
+        <div className={styles.date}>
           Created on:&nbsp;
           {new Date(post.created_on).toLocaleDateString()}
-        </h6>
+        </div>
       </div>
       <div className={styles.comments_link}>
         {showNavLinks ? (
@@ -64,7 +64,8 @@ const PostBody = ({ post, setPost, token, showNavLinks, hideDeleteButton }) => {
         {/* <div>
           {showDeleteButton ? <DeletePostButton token={token} /> : <></>}
         </div> */}
-      </div>
+      
+    </div>
     </div>
   );
 };

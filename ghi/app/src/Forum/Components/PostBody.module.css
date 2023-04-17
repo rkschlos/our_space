@@ -1,31 +1,44 @@
 .card {
-    background-color: #ebf6f5;
-    border-radius: 5px;
+    background-color: aliceblue;
+    border-radius: 25px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     width: 60%;
     margin: auto;
+    margin-top: 40px;
+    overflow: auto;
+    
+}
+
+.detail_title {
+    font-weight:600;
+    margin-top: 20px;
+    text-align: center;
 }
 
 .detail_button {
-    background: #5cbdb9;
     border: none;
     padding: 0;
     cursor: pointer;
     text-decoration: wavy;
     font-size:x-large;
     margin-top: 20px;
+    background-color: aliceblue;
 }
 
 .text {
-    background-color: aliceblue;
     width:60%;
     margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 .date {
+    font-size: 12px;
     background-color: aliceblue;
+    text-align: center;
 }
 
 .comments_link {
-    background-color: aliceblue
+    background-color: aliceblue;
 }

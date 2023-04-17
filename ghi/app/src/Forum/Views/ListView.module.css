@@ -1,4 +1,26 @@
 .forum_body {
     text-align: center;
-    background-color: #fbe3e8;
+}
+
+.createButton {
+  width: 10%;
+  padding: 12px 0;
+  margin-bottom: 20px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 800;
+  color: white;
+  background-color: white;
+  border: 0;
+  border-radius: 35px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.02, 0.01, 0.47, 1);
+  background: white;
+  background: linear-gradient(to right, #74b49b, #458c4f);
+}
+
+.createButton:hover {
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.16);
+    transform: translate(0, -5px);
 }

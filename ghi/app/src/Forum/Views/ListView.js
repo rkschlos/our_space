@@ -29,7 +29,7 @@ const ListView = (props) => {
       <div className={styles.forum_body}>
         
           <h1>OurForum &#9825;{" "}</h1>
-          <button onClick={() => navigate("/posts/new/")}>
+          <button className={styles.createButton} onClick={() => navigate("/posts/new/")}>
             Create post
           </button>
 

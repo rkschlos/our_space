@@ -7,11 +7,17 @@ list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: yellow;
+  background-color: teal;
 }
 
 .li {
   float: right;
   display: block;
   padding: 8px;
+}
+
+.li_h {
+    float: left;
+    display: block;
+    padding: 8px;
 }

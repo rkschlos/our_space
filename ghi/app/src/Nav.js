@@ -26,22 +26,21 @@ function Nav(props) {
   // }
   return (
     <nav className={styles.navbar}>
-      <div className="container-fluid">
-        <NavLink className="navbar-brand" to="/">
-          OurSpace
-        </NavLink>
+      <div>
         <div>
           <ul className={styles.ul}>
             {token ? (
               <>
                 {/* Whatever you want to show when people are logged in */}
+                <NavLink className={styles.li_h} to="/">
+                  Home
+                </NavLink>
                 <NavLink className={styles.li} to="/logout" role="button">
                   Logout {user.username}
                 </NavLink>
                 {/* <NavLink className="dropdown-item" to="/profile/new" role="button">
                   Profile Form
                 </NavLink> */}
-                
                 <NavLink className={styles.li} to="jobs" role="button">
                   Jobs
                 </NavLink>
