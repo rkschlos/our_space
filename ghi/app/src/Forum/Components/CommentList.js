@@ -20,11 +20,12 @@ const CommentListBody = ({ comments }) => {
         return (
           <div key={comment.comment_id} className="card mb-3">
             <div className="card-body">
-              <h5 className={styles.card_text}>{comment.text}</h5>
+              <h5 className={styles.card_text}>{comment.text}
               <h6 className={styles.date}>
                 {new Date(comment.created_on).toLocaleDateString()}
                 &nbsp; at {new Date(comment.created_on).toLocaleTimeString()}
               </h6>
+              </h5>
             </div>
           </div>
         );

@@ -46,9 +46,11 @@ const PostBody = ({ post, setPost, token, showNavLinks, hideDeleteButton }) => {
           >
             View Comments
           </NavLink>
+          
         ) : (
           ""
         )}
+        <div>
         <UpvoteButton
           token={token}
           postId={post.post_id}
@@ -61,6 +63,7 @@ const PostBody = ({ post, setPost, token, showNavLinks, hideDeleteButton }) => {
             setPost(newPost);
           }}
         />
+        </div>
         {/* <div>
           {showDeleteButton ? <DeletePostButton token={token} /> : <></>}
         </div> */}

@@ -1,11 +1,13 @@
 .upvoteButton {
-   
- 
+  
   border: none;
-  margin-right: 10px;
+  margin-right: 15px;
   margin-bottom: 10px;
-  font-size: medium;
+  font-size: large;
   background-color: white;
+  cursor: pointer;
+  box-shadow: 0;
+  font-family: inherit;
 
 
 }

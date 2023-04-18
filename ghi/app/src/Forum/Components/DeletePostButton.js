@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import styles from "./DeletePostButton.module.css"
 
 
 function DeletePostButton({ token, postId }) {
@@ -21,7 +22,7 @@ function DeletePostButton({ token, postId }) {
   }
 
   return (
-    <button onClick={DeletePost}>
+    <button onClick={DeletePost} className={styles.deleteButton} >
       Delete Post
     </button>
   );

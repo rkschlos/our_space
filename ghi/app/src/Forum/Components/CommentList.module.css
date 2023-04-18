@@ -4,12 +4,13 @@
     width: 80%;
     margin-right: auto;
     margin-left: auto;
+    margin-bottom: 20px
 }
 
 .header {
     font-size: larger;
     margin-top: 40px;
-     border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
 }
 
 .link_to_comment {
@@ -22,13 +23,18 @@
     margin-bottom: 0px;
     padding-top: 15px;
     padding-bottom: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 20px;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 
     background-color: white;
 }
 
 .date {
     color: grey;
-    
+    margin-bottom: 0px
 }
