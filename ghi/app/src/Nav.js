@@ -32,7 +32,7 @@ function Nav(props) {
             {token ? (
               <>
                 {/* Whatever you want to show when people are logged in */}
-                <NavLink className={styles.li_h} to="/">
+                <NavLink className={styles.li_logo} to="/">
                   Home
                 </NavLink>
                 <NavLink className={styles.li} to="/logout" role="button">

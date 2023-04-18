@@ -10,14 +10,28 @@ list-style-type: none;
   background-color: teal;
 }
 
-.li {
-  float: right;
+.li_logo {
+  float: left;
   display: block;
   padding: 8px;
+  color:white;
+  font-size: 18px;
 }
 
-.li_h {
-    float: left;
+.li_logo:hover {
+  background-color: white;
+  color: teal;
+}
+
+.li {
+    float: right;
     display: block;
     padding: 8px;
+    color: white;
+    font-size: 18px;
+}
+
+.li:hover {
+  background-color: white;
+  color: teal;
 }

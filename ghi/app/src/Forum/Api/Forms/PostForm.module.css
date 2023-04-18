@@ -1,0 +1,68 @@
+.title {
+    color: #a63a79;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.form_card {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  height: 400px;
+  margin-top: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  background-image: url(https://images.pexels.com/photos/7666254/pexels-photo-7666254.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://images.pexels.com/photos/7666254/pexels-photo-7666254.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+}
+
+.label {
+    color: white;
+    font-size: large;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    font-weight:600;
+}
+
+.input_card {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+
+.input_title {
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.input_post {
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  height: 100px;
+}
+
+.submitButton {
+    margin-top: 30px;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  background-color: teal;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.submitButton:hover {
+  background-color: #0062cc;
+}

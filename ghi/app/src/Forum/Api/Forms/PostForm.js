@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import styles from "./PostForm.module.css"
 
 function PostForm(props) {
   const token = props.token;
@@ -60,13 +61,14 @@ function PostForm(props) {
     <div className="row">
       <div className="offset-3 col-6">
         <div className="shadow p-4 mt-4">
-          <h1>Create a Post</h1>
+          <h1 className={styles.title}>Create a Post &#9825;{" "}</h1>
           <form
-            style={{ color: "pink" }}
+            className={styles.form_card}
             onSubmit={handleSubmit}
             id="create-form"
           >
-            <div className="form-floating mb-3">
+            <div className={styles.input_card}>
+              <label htmlFor="title" className={styles.label}> Post Title</label>
               <input
                 onChange={handleChange}
                 value={statePost.title}
@@ -75,12 +77,12 @@ function PostForm(props) {
                 type="text"
                 name="title"
                 id="title"
-                className="form-control"
+                className={styles.input_title}
               />
-              <label htmlFor="name"> Post Title</label>
             </div>
-            <div className="form-floating mb-3">
-              <input
+            <label htmlFor="text" className={styles.label}>Text</label>
+            <div className={styles.input_card}>
+              <textarea
                 onChange={handleChange}
                 value={statePost.text}
                 placeholder="text"
@@ -88,12 +90,12 @@ function PostForm(props) {
                 type="text"
                 name="text"
                 id="text"
-                className="form-control"
+                className={styles.input_post}
                 row="10"
               />
-              <label htmlFor="text">Text</label>
+             
             </div>
-            <button className="btn btn-secondary">Submit</button>
+            <button className={styles.submitButton}>Submit</button>
           </form>
         </div>
       </div>

@@ -10,11 +10,15 @@
 .header {
     font-size: larger;
     margin-top: 40px;
-    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    padding: 10px;
+    font-weight: 600;
 }
 
 .link_to_comment {
     font-size: medium;
+    padding-top: 10px;
+    font-weight: 400;
 }
 
 .card_text {

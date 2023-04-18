@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import styles from "./CommentForm.module.css"
 
 function CommentForm(props) {
   const token = props.token;
@@ -56,14 +57,16 @@ function CommentForm(props) {
     <div className="row">
       <div className="offset-3 col-6">
         <div className="shadow p-4 mt-4">
-          <h1>Add a Comment</h1>
+          <h1 className={styles.title}>Add a Comment &#9825;{" "}</h1>
           <form
-            style={{ color: "pink" }}
+            className={styles.form_card}
             onSubmit={handleSubmit}
             id="create-form"
           >
-            <div className="form-floating mb-3">
-              <input
+            <label htmlFor="name" className={styles.label}>Comment</label>
+            <div className={styles.input_card}>
+        
+              <textarea
                 onChange={handleChange}
                 value={stateComment.text}
                 placeholder="text"
@@ -71,11 +74,11 @@ function CommentForm(props) {
                 type="text"
                 name="text"
                 id="text"
-                className="form-control"
+                className={styles.input_comment}
               />
-              <label htmlFor="name">Comment</label>
+              
             </div>
-            <button className="btn btn-secondary">Submit</button>
+            <button className={styles.submitButton}>Submit</button>
           </form>
         </div>
       </div>

@@ -1,15 +1,15 @@
-import styles from "./Main.module.css"
+import styles from "./MainPage.module.css"
 
 function MainPage() {
     return (
       <>
         <div className="main-hero-image shadow">
           <div className="main-overlay">
-            <h1 className="display-5 fw-bold">OurSpace</h1>
+            <h1 className={styles.title}>OurSpace</h1>
             
             <div className="container">
 
-              <p className="mb-4 text-center">
+              <p className={styles.subtitle}>
                 OurSpace is an inclusive social networking platform 
                 for women and underrepresented individuals in the tech 
                 industry to connect share experiences.
