@@ -26,7 +26,8 @@ const PostBody = ({ post, setPost, token, showNavLinks, hideDeleteButton }) => {
                 {hideDeleteButton ? (
                   <></>
                 ) : (
-                  <DeletePostButton token={token} postId={post.post_id} />
+                  
+                  <DeletePostButton token={token} postId={post.post_id} className={styles.deleteButton}/>
                 )}
               </div>
             </>
